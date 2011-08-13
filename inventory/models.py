@@ -22,7 +22,7 @@ class Item(models.Model):
 	donation_notes = models.TextField(blank=True)
 	voltage = models.CharField(max_length=10, choices=POWER_CHOICES, blank=True, default="120v")
 	amps_rating = models.DecimalField(max_digits=5, decimal_places=2, blank=True, null=True)
-	watts_rating = models.DecimalField(max_digits=5, decimal_places=2, blank=True, null=True)
+	watts_rating = models.DecimalField(max_digits=6, decimal_places=2, blank=True, null=True)
 	supplies_needed = models.TextField(blank=True, help_text="Consumables and associated stuff used with the item")
 	general_notes = models.TextField(blank=True)
 
